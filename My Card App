@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyCard());
+}
+
+class MyCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: NetworkImage(
+                  'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ef235af8-b407-482f-be87-a165aee8ded4/dfnfd4l-8bd73f90-fef7-49b5-a668-5c4e4af924da.jpg/v1/fill/w_646,h_1238,q_70,strp/anime_boy_sunset_portrait__digital_art_by_darkedgeyt_dfnfd4l-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2VmMjM1YWY4LWI0MDctNDgyZi1iZTg3LWExNjVhZWU4ZGVkNFwvZGZuZmQ0bC04YmQ3M2Y5MC1mZWY3LTQ5YjUtYTY2OC01YzRlNGFmOTI0ZGEuanBnIiwid2lkdGgiOiI8PTY2OCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.0Tk1dVqU1uiEPwYmP2IRS6Qtez5Aqde5bZStAXMmqw0'),
+            ),
+            Text('Syed Mahad Raza', style: TextStyle(
+              fontSize: 30,
+              fontFamily: 'Pacifico',
+                color: Colors.teal[970]
+            ),),
+            Text('Flutter developer', style: TextStyle(
+              fontSize: 23.0,
+             fontFamily: 'Poppins',
+              color: Colors.teal[900]
+            ),),
+            SizedBox(
+              width: 300,
+              child: Divider(
+                color: Colors.white70,
+              ),
+            ),
+            Container (
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+              color: Colors.white70,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.email, color: Colors.teal,
+                  ),
+                  SizedBox(width: 23.0,),
+                  Text('syedmahadraza45@gmail.com',
+                    style: TextStyle(fontSize: 20.0),
+
+                  ),
+                ],
+              ),
+
+            ),
+            SizedBox(height: 10),
+            Container(
+              color: Colors.white70,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+              
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  SizedBox(width: 20,),
+                  Text('03123456789', style: TextStyle(fontSize: 20),)
+                ],
+              )
+            ),
+          ],
+        )),
+      ),
+    );
+  }
+}
